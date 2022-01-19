@@ -5,9 +5,257 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#headerLogo {
+  height:20%;
+  width: 20%;
+}
+
+.header_bar {
+  text-align: center;
+}
+
+.line {
+  border-bottom: 3px solid gray;
+  margin: 0% 10% 0% 10%;
+}
+
+.login_page {
+  margin: 10% 20% 10% 20%;
+  padding: 5% 5%;
+  background-color: blanchedalmond;
+  text-align: center;
+  width: 45%;
+  height: 160px;
+}
+
+#lpemail {
+  color:gray;
+  text-align:center;
+}
+
+.login_page .btn {
+  margin:20px;
+  width:100px;
+  color:gray;
+  
+}
+
+#publisher {
+  height: 200px;
+  width :500px;
+  border: 1px solid black;
+  margin: 5px;
+  display: inline-flex;
+}
+
+#pubFrame {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  border:1px solid gray;
+}
+
+#conference {
+  text-align: center;
+  
+}
+
+#start_end {
+  background-color: #2596be;
+  text-align: center;
+  width: 1200px;
+  height:50px;
+  margin: auto;
+  
+}
+
+#StartConf {
+  margin:auto;
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  font-weight: bold;
+}
+
+#end_session {
+  margin:auto;
+  background-color: darkred;
+  color: blanchedalmond;
+  
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  font-weight: bold;
+}
+
+#conf_body {
+  background-color:#cfedef;
+  text-align: center;
+  width: 1200px;
+  height:600px;
+  margin: auto;
+  display:flex;
+}
+
+#publish_field {
+  background-color:#f2d89f;
+  background-color:white;
+  text-align: center;
+  width: 300px;
+  height:600px;
+}
+
+#zoom_out {
+  background-color:#ffecb4;
+  background-color:white;
+  text-align: center;
+  width: 600px;
+  height:600px;
+}
+
+#chat_div {
+  background-color:#eebca5;
+  background-color:white;
+  /* text-align: center; */
+  width: 300px;
+  height:600px;
+}
+
+#publish_camera {
+  width :200px;
+  height:200px;
+  background-color: lightgray;
+  margin:auto;
+  margin-top: 20px;
+}
+
+#publish_screen {
+  width :200px;
+  height:200px;
+  background-color: lightgray;
+  margin:auto;
+  margin-top: 20px;
+}
+
+#btn_publish{
+  width:100px;
+  height:30px;
+  margin:auto;
+  margin-top: 20px;
+}
+
+.btn_pub {
+  width:100px;
+  height:30px;
+  margin:auto;
+  margin-top: 20px;
+
+}
+
+#btn_screen{
+  width:100px;
+  height:30px;
+  margin:auto;
+  margin-top: 20px;
+}
+#zoom_stream {
+  
+  width:500px;
+  height:500px;
+  margin:auto;
+  margin-top: 50px;  
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  align-items: center;
+}
+
+#chat_view{
+  width:260px;
+  height:500px;
+  margin:auto;
+  margin-top: 50px;  
+  background-color: white;
+}
+
+#lower_field {
+  width: 1200px;
+  height: 260px;
+  margin: auto;
+  background-color: white;
+  display:flex;
+}
+
+#subscriber{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  margin: auto;
+}
+#sub_box {
+  width: 870px;
+  height: 200px;
+  background-color: gray;
+  margin: 31px 15px 15px 15px;
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+#sub_box > div {
+  margin-left: 5px;
+}
+
+#chat_box {
+  width: 300px;
+  height: 260px;
+  background-color: white;
+  display:flex
+
+}
+
+#chat_input {
+  width:220px;
+  height: 80px;
+  margin-top: 100px;
+  margin-left: 5px;
+  background-color: white;
+  word-break: break-word;
+}
+
+#send {
+  width:60px;
+  height: 60px;
+  margin-top: 110px;
+  margin-left: 3px;
+}
+
+.messages {
+
+  width:260px;
+  height:485px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0.5em;
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+  background-color: rgba(255, 255, 255, 0.75); */
+  border:1px solid black
+}
+
+.messages p {
+  text-align: left;
+  display: flex;
+  word-break: break-all;
+  margin: 2px;
+  padding: 0;
 }
