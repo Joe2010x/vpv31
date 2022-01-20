@@ -4,7 +4,7 @@ import axios from 'axios'
 const LoginPage =(props)=>{
     //const base_Url = "http://192.168.10.197:3001"
     const base_Url = "https://vpbackend-utu.herokuapp.com"
-    const [email,setEmail] = useState ("email")
+    const [email,setEmail] = useState ("")
     const [userList,setUserList]=useState(null)
 
     const changeEmail = (event)=>{
