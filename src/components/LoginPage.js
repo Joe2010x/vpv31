@@ -10,17 +10,11 @@ const LoginPage =(props)=>{
     const changeEmail = (event)=>{
         setEmail(event.target.value)
     }
-    //let userList = null
-    //useEffect(()=>{},[])
-       
-    
-    //const checkEmail =()=>{}
+  
     const checkEmail = () =>{
         let token = null
-        //let base_Url1= "http://localhost:3001"
          axios.get(base_Url +"/getToken/"+email)
             .then(res=>{
-               // userList = JSON.stringify(res.data) 
                console.log(res)
                if (res.status === 200) {
                     token = res.data
@@ -30,33 +24,9 @@ const LoginPage =(props)=>{
 
                } else {
                 alert("User does not exist!")
-                }
-
-                
-            })
-        // let person = null;
-        // console.log("email is "+email)
-        // //if (!userList) {
-        //     console.log(userList.persons[1].email)
-
-        //     if (userList!==null) {
-        //         person = userList.persons.find(item=>item.email === email)
-        //     } 
-        //     if (person!==null) {
-                
-        //     } else {
-        //         alert("User does not exist!")
-        //     }
-
-
-        //}
-        
+                }  
+            })   
     }
-
-
-
-    //props.getUserEmail(email)
-
     return (
         <div className='login_page'>
             <h2>Please enter your email address</h2>
@@ -64,8 +34,6 @@ const LoginPage =(props)=>{
             <input id="lpemail" onChange = {changeEmail} type='text' value = {email} ></input>
             <br/>
             <button className="btn" onClick = {checkEmail} >SUBMIT</button>
-            {/* <br/>
-            <p>{"the email value is "+email}</p> */}
         </div>
     )
 }
