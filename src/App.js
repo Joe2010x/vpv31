@@ -35,12 +35,6 @@ function App() {
       <Conference 
         newToken = {token}/>
         }
-      {/* {(!logedIn)?
-        <p>not loged in</p>
-      :null} */}
-
-      
-   
     </div>
   );
 }
