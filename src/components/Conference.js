@@ -83,7 +83,6 @@ const Conference =(props)=>{
             handleError
             )
             console.log("new stream id is "+event.stream.streamId)
-            //subscriber.element.style.padding="20px"
             subscriber.element.onclick = function(){
                 console.log("result of click is "+event.stream.streamId)
                 session.subscribe(event.stream,"zoom_stream",
@@ -96,24 +95,14 @@ const Conference =(props)=>{
             )
             
             }
-
-            // document.getElementById(event.stream.streamId).style.padding="20px";
-            // document.getElementById(event.stream.streamId).onclick = function(){
-            //     console.log("result of click is "+event.stream.streamId)
-            // }
         }
             
             
         )
 
         session.on("signal:msg", function (event){
-            
-                //alert("signal received "+ event.data)
-                //setChatText(chatText.copy()+"\n"+event.data)
                 updateChat(event.data)
-            
         })
-
     }
 
     function updateChat(content) {
@@ -128,9 +117,7 @@ const Conference =(props)=>{
       }
 
     const terminateSession = () =>{
-        //session = OT.initSession(api_key,sessionId);
         setStartOn (true)
-        //setSessionIsOn(true)
     }
 
         const publishCamera =()=>{
@@ -138,7 +125,6 @@ const Conference =(props)=>{
                 publishAudio:true,
                 publishVideo:true
             }
-            //create a publisher
             publisher_cam = OT.initPublisher (
                 "publish_camera",pubOptions,
                 {
@@ -155,17 +141,10 @@ const Conference =(props)=>{
                         } else {
                             console.log("Publishing Camera to stream.")
                         }
-                    })
-                
-                    
-             
+                    })      
         }
-
         
-
         const cameraOff = () =>{
-
-            //session.unpublish(publisher_cam)
             setpublishBtnOn(true)
             let pubOptions = {
                 publishAudio:true,
@@ -184,8 +163,6 @@ const Conference =(props)=>{
         }
 
         const screenOff = () =>{
-
-            //session.unpublish(publisher_scr)
             setScreenBtnOn(true)
             let pubOptions = {
                 publishAudio:true,
@@ -219,33 +196,20 @@ const Conference =(props)=>{
                 },
                 handleError
             );
-            //setpublishBtnOn(false)
-            
                     session.publish(publisher_scr,function(error){
                         if (error){
                             console.log(error)
                         } else {
                             console.log("Publishing screen to stream.")
                         }
-                    })
-                
-            
-                    
-             
-            
+                    })   
         }
-        // const getEleId=(e) =>{
-        //     console.log("the element id is ")
-        //     console.log("target is "+e.target.id);
-        //     console.log("current target is "+e.currentTarget.id)
-        // }
 
         const handleChatInput =(event)=>{
             setChatInputValue (event.target.value)
         }
 
         const sendText = ()=>{
-            //alert("text input is "+ chatInputValue)
             session.signal ({   data:person+" says == > "+chatInputValue,
                                 type:"msg"
                 },
@@ -255,15 +219,10 @@ const Conference =(props)=>{
                     } else 
                         {
                             console.log('signal sent.')
-                            // setChatText("btn action "+chatText.slice()+"\n"+chatInputValue.slice()+"\n")
-                            // console.log(chatText)
                         } 
                     } 
-                )
-                
+                ) 
         }
-
-    
 
     return (
         <div id="conference">
@@ -340,22 +299,6 @@ const Conference =(props)=>{
                 </div>
             </div>
             :null}
-
-            
-            
-            
-
-            {/* <div id="pubFrame">
-            <div id="publisher"></div>
-            </div>
-            <br/>
-            {newToken}
-            <br/>
-            {api_key}
-            <br/>
-            {sessionId}
-            <br/> */}
-
         </div>
     )
 }
